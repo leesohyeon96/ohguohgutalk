@@ -21,7 +21,6 @@ export default function Header() {
     useEffect(() => {
             let isLogin = window.sessionStorage.getItem('login');
             if(isLogin) {
-                console.log("로그인 세션 있음");
                 dispatch(login(true));
                 dispatch(userid(window.sessionStorage.getItem("userId")));
             }
